@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slidie</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+	<link rel="stylesheet" type = "text/css" href="{{ url_for('static',filename = 'style.css')}}" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!----hero Section start---->
+
+    <div class="hero">
+      <nav>
+        <h2 class="logo">Sli<span>die</span></h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Slidie</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <a href="#" class="btn">Subscribe</a>
+      </nav>
+
+      <div class="content">
+        <h4>Hello, I am</h4>
+        <h1>Sli<span>die</span></h1>
+        <h3>Hands-Free Presentation Tool</h3>
+        <div class="newslatter">
+          <!-- <form>
+            <input
+              type="email"
+              name="email"
+              id="mail"
+              placeholder="Enter Your Email"
+            />
+            <input type="submit" name="submit" value="Lets Start" />
+          </form> -->
+        </div>
+      </div>
+    </div>
+
+    <!----About section start---->
+    <section class="about">
+      <div class="main">
+        <!-- <img src="img/slidie.png" /> -->
+        <div class="about-text">
+          <h2>About Slidie</h2>
+          <h5>Seamless <span>& Interactive</span></h5>
+          <p>
+            Slidie is a hands-free, interactive way to present your
+            presentation. It interacts with the PPT through gestures and speech.
+            With Slidie, you'll have a smooth and fluid presenting experience.
+            <!-- I am a front-end web developer. I can provide clean code and pixel
+            perfect design. I also make the website more & more interactive with
+            web animations.I can provide clean code and pixel perfect design. I
+            also make the website more & more interactive with web animations.A
+            responsive design makes your website accessible to all users,
+            regardless of their device. -->
+          </p>
+          <button type="button">Let's Talk</button>
+        </div>
+      </div>
+    </section>
+
+    <!-----service section start----------->
+    <div class="service">
+      <div class="title">
+        <h2>Steps</h2>
+      </div>
+
+      <div class="box">
+        <div class="card">
+          <i class="fas fa-bars"></i>
+          <h5>Web Development</h5>
+          <div class="pra">
+            <p>
+              Every website should be built with two primary goals: Firstly, it
+              needs to work across all devices. Secondly, it needs to be fast as
+              possible.
+            </p>
+
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="far fa-user"></i>
+          <h5>Web Development</h5>
+          <div class="pra">
+            <p>
+              Every website should be built with two primary goals: Firstly, it
+              needs to work across all devices. Secondly, it needs to be fast as
+              possible.
+            </p>
+
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="far fa-bell"></i>
+          <h5>Web Development</h5>
+          <div class="pra">
+            <p>
+              Every website should be built with two primary goals: Firstly, it
+              needs to work across all devices. Secondly, it needs to be fast as
+              possible.
+            </p>
+
+            <p style="text-align: center">
+              <a class="button" href="#">Read More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------Contact Me------>
+    <div class="contact-me">
+      <p>Let Me Get You A Beautiful Website.</p>
+      <a class="button-two" href="#">Hire Me</a>
+    </div>
+
+    <!------footer start--------->
+    <footer>
+      <p>Tahmid Ahmed</p>
+      <p>
+        For more HTML, CSS, and coding tutorial - please click on the link below
+        to subscribe to my channel:
+      </p>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+      </div>
+      <p class="end">CopyRight By Tahmid Ahmed</p>
+    </footer>
+
+	<div class="container">
+		<div class="row">
+		  <div class="col-lg-8 offset-lg-2">
+			<h3 class="mt-5">Live Streaming</h3>
+			<video id="video" width="480" height="360" hidden></video>
+			<img id="img" src="{{ url_for('video') }}" height = "100%">
+		  <div class="col-lg-8 offset-lg-2">
+			<button
+			  id="btnPip"
+			  style="display: none"
+			  type="button"
+			  class="button"
+			>
+			  Enter Picture-in-Picture
+			</button>
+			<button
+			  id="btn_2"
+			  type="button"
+			  class="button"
+			>
+			 Share Screen
+			</button>
+			<button
+			  id="btn_3"
+			  type="button"
+			  class="button"
+			>Full Screen</button>
+		  </div>
+		</div>
+	  </div>
+
+
+
+	<script>
+		var videoElement = document.getElementById("video");
+		var imgElement = document.getElementById("img");
+		const btn = document.getElementById("btnPip");
+		const btn_2 = document.getElementById("btn_2");
+		const btn_3 = document.getElementById("btn_3");
+  
+  
+  
+		async function videoStream(){
+		  try{
+			const stream = await navigator.mediaDevices.getDisplayMedia();
+			videoElement.srcObject = stream;
+			videoElement.onloadedmetadata = () => {
+			  videoElement.play()
+			}
+		  }
+		  catch(error){
+			console.log('error')
+		  }
+		}
+  
+		  /* When the openFullscreen() function is executed, open the video in fullscreen.
+		  Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+		  function openFullscreen() {
+			if (imgElement.requestFullscreen) {
+			  imgElement.requestFullscreen();
+			} else if (elem.webkitRequestFullscreen) { /* Safari */
+			  imgElement.webkitRequestFullscreen();
+			} else if (elem.msRequestFullscreen) { /* IE11 */
+			  imgElement.msRequestFullscreen();
+			}
+		  }
+  
+		  /* Close fullscreen */
+		  function closeFullscreen() {
+			if (document.exitFullscreen) {
+			  document.exitFullscreen();
+			} else if (document.webkitExitFullscreen) { /* Safari */
+			  document.webkitExitFullscreen();
+			} else if (document.msExitFullscreen) { /* IE11 */
+			  document.msExitFullscreen();
+			}
+		  }
+		if ("pictureInPictureEnabled" in document) {
+		  btn.style.display = null;
+  
+		  btn.addEventListener("click", async() => {
+			  btn.disabled = true;
+			  await videoElement.requestPictureInPicture().catch((err) => {
+			  console.log(err);
+			});
+			btn.disabled = false;
+		  });
+		}
+  
+		btn_2.addEventListener("click", async() => {
+		  videoStream()       
+			});
+		btn_3.addEventListener("click", async() => {
+		  openFullscreen()       
+			});
+	  </script>
+
+  </body>
+</html>

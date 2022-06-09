@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slidie</title>
+<!--    <link rel="stylesheet" type="text/css" href="css/style.css" />-->
+    <link rel="stylesheet" type = "text/css" href="{{ url_for('static',filename = 'style.css')}}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!----hero Section start---->
+
+    <div class="hero">
+      <nav>
+        <h2 class="logo">Sli<span>die</span></h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Slidie</a></li>
+          <li><a href="#modules">Modules</a></li>
+          <li><a href="#started">Get Started</a></li>
+          <li><a href="https://github.com/sbathwal1999/trial_cv/raw/main/Report.pdf" download = 'Slidie Report.pdf'>Report</a></li>
+        </ul>
+<!--        <a href="#" class="btn">Subscribe</a>-->
+      </nav>
+
+      <div class="content">
+        <h4>Hello, I am</h4>
+        <h1>Sli<span>die</span></h1>
+        <h3>Hands-Free Presentation Tool</h3>
+        <div class="newslatter">
+          <!-- <form>
+            <input
+              type="email"
+              name="email"
+              id="mail"
+              placeholder="Enter Your Email"
+            />
+            <input type="submit" name="submit" value="Lets Start" />
+          </form> -->
+        </div>
+      </div>
+    </div>
+
+    <!----About section start---->
+    <section class="about" id="about">
+      <div class="main">
+        <!-- <img src="img/slidie.png" /> -->
+        <div class="about-text">
+          <h2>About Slidie</h2>
+          <h5>Seamless <span>& Interactive</span></h5>
+          <p>
+            Slidie is a hands-free, interactive way to present your
+            presentation. It interacts with the PPT through gestures and speech.
+            With Slidie, you'll have a smooth and fluid presenting experience.
+            <!-- I am a front-end web developer. I can provide clean code and pixel
+            perfect design. I also make the website more & more interactive with
+            web animations.I can provide clean code and pixel perfect design. I
+            also make the website more & more interactive with web animations.A
+            responsive design makes your website accessible to all users,
+            regardless of their device. -->
+          </p>
+<!--          <button type="button">Let's Talk</button>-->
+        </div>
+      </div>
+    </section>
+
+    <!-----service section start----------->
+    <div class="service" id = 'modules'>
+      <div class="title">
+        <h2>Modules</h2>
+      </div>
+
+      <div class="box">
+        <div class="card">
+          <i class="fas fa-bars"></i>
+          <h5>Gesture Reading</h5>
+          <div class="pra">
+            <p>
+                Slidie can interpret your hand gestures to operate MS Powerpoint Presentation.
+                Experience Seamless Presentation Experience.
+            </p>
+
+            <p style="text-align: center">
+              <a class="button" href="https://github.com/sbathwal1999/trial_cv/raw/main/GESTURE%20READING%20MANUAL.pdf" download="Gesture Manual.pdf">Manual</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="far fa-user"></i>
+          <h5>Voice Control</h5>
+          <div class="pra">
+            <p>
+                Slidie has its own built-in voice control tool called "Happy".
+                Happy will liven up your presentation and make it more fun.
+            </p>
+
+            <p style="text-align: center">
+              <a class="button" href="https://github.com/sbathwal1999/trial_cv/raw/main/VOICE%20GUIDELINES.pdf" download="Voice Manual.pdf">Manual</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="far fa-bell"></i>
+              <h5>Powerpoint</h5>
+          <div class="pra">
+            <p>
+                Slidie expects that you have MS Powerpoint installed on your system.
+                Let's get started with Slidie. <br>Have Fun!!!
+            </p>
+
+            <p style="text-align: center">
+              <a class="button" href="https://www.microsoft.com/en-in/microsoft-365/powerpoint" target = '_blank'>Download</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------Contact Me------>
+<!--    <div class="contact-me">-->
+<!--      <p>Let Me Get You A Beautiful Website.</p>-->
+<!--      <a class="button-two" href="#">Gesture</a>-->
+<!--          <a class="button-two" href="#">Voice</a>-->
+<!--          <a class="button-two" href="#">Presentation</a>-->
+<!--    </div>-->
+
+    <!------footer start--------->
+    <footer>
+      <p>Let's Get Started</p>
+      <p>
+        Follow the order from left to right.
+      </p>
+      <div class="social" id="started">
+          <a class="button-two" href="{{ url_for('video') }}"  target="_blank">Gesture</a>
+          <a class="button-two" href="{{ url_for('audio') }}"  target="_blank">Voice</a>
+          <a class="button-two" href="#">Presentation</a>
+<!--        <a href="#"><i class="fab fa-facebook-f"></i></a>-->
+<!--        <a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--        <a href="#"><i class="fab fa-dribbble"></i></a>-->
+      </div>
+      <p class="end">MADE BY GROUP SE7EN</p>
+    </footer>
+
